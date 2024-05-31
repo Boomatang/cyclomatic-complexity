@@ -1,0 +1,58 @@
+\section{Understanding Cyclomatic Complexity}
+
+Cyclomatic complexity\footnote{\href{https://en.wikipedia.org/wiki/Cyclomatic_complexity}{https://en.wikipedia.org/wiki/Cyclomatilc\_complexity}} is a measurement created from the control flow of an application.
+It uses the number of edges and nodes in the control flow graph along with the number of connected components.
+The common formula is M = E - N + 2P, where
+\begin{itemize}
+	\item E = the number of edges of the graph.
+	\item N = the number of nodes of the graph.
+	\item P = the number of connected components.
+\end{itemize}
+There are other formulas depending on if the graph is a strongly connected graph but for this scenario those do not matter.
+
+The simplest understanding of how to calculate this metric is every time the function makes a choice the one gets added to complexity and a function has a base level complexity of one.
+Below are two example functions that produce the same output and both a cyclomatic complexity of two.
+But the structure of each function is different.
+
+% Python code block
+\begin{center}
+	% \codefile{Sample Functions}{./understanding_cc.py}
+\end{center}
+
+The above examples show that readability may have no effect on the \cc and by that point, the style of a language or a team of programmers should not affect the overall metric.
+What will affect the metric is how the tooling authors interpret the language control flow features.
+For example, a switch statement with cases that fall through to the next case can be counted as one or the total number of cases that are passed through.
+
+As the Kuadrant project uses multiple languages, we can only use the metric from a high-level, trending viewpoint.
+Scores across multiple languages should not be compared with each other.
+
+\subsection{Classifying Cyclomatic Complexity}
+The metric itself is a number but as a single number, the metric is hard to reason about, so it is bucketed into categories.
+While researching this work, I came across a number of different bucketing systems.
+I will use the bucket classification found on \href{https://radon.readthedocs.io}{radon.readthedocs.io}, it gives a good range at both ends of the spectrum.
+These classifications can be seen in \textbf{Figure \ref{tab:cc_scores}}.
+This ranking will be used and from a high level you want scores in the ABC grouping and not many Fs.
+\begin{figure}
+
+	\begin{center}
+		\begin{tabular}{|l|l|l|}
+			\hline
+			\textbf{CC Score} & \textbf{Rank} & \textbf{Risk}                           \\
+			\hline
+			1 - 5             & A             & Low - simple block                      \\
+			\hline
+			6 - 10            & B             & Low - well-structured and stable block  \\
+			\hline
+			11 - 20           & C             & Moderate - slightly complex block       \\
+			\hline
+			21 - 30           & D             & More than moderate - more complex block \\
+			\hline
+			31 - 40           & E             & High - complex block, alarming          \\
+			\hline
+			40+               & F             & Very high - error-prone, unstable block \\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Table grouping \cc scores.}
+	\label{tab:cc_scores}
+\end{figure}

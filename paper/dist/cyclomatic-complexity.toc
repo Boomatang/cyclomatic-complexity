@@ -1,0 +1,23 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Kuadrant Project}{1}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Understanding Cyclomatic Complexity}{1}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Classifying Cyclomatic Complexity}{1}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Case Study: Cyclomatic Complexity in Kuadrant}{2}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Data collection and analysis}{2}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Inital Assumptions}{3}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Applications V's Operators}{3}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Language Difference}{3}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Lines of Code within the Kuadrant Project}{4}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Diving into the Complexity}{4}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}The wasam shim project}{6}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}The limitador project}{6}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}The testsuite repo}{7}{subsubsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.5}Reference}{9}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}Datafile}{9}{subsubsection.3.5.1}%
+\contentsline {subsubsection}{\numberline {3.5.2}Projects}{9}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.3}Languages}{9}{subsubsection.3.5.3}%
+\contentsline {section}{\numberline {4}Using the cyclomatic complexity metric}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Guide for testing}{10}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}The 10\textsuperscript {th} September 1752 problem.}{11}{subsubsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.2}Aiding system design}{11}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Conclusion}{11}{section.5}%

@@ -1,0 +1,22 @@
+\section{Conclusion}
+
+The conclusion of this research into \cc is as follows.
+While the \cc scores can show how large a project is, it will not say anything about how well it is designed.
+It is a good metric for identifying areas within a code base that maybe too complex, and should have a refactor done.
+The inverse is also true, it can identify areas that are overly simple requiring developers to hold more information in their heads.
+
+Begin able to calculate the \cc manually in your head can be useful as a guide to how many test cases a function should be created.
+The test cases should still be meaningful, and not created to just please some metric on a dashboard.
+
+As the testsuite showed know how the projects are run and how the tooling calculates \cc scores can change the results greatly.
+This means there may be other ways to trick the metric into lower results at the cost of creating less stable software.
+
+Tracking the metric over time is also worthless, as the project grows, so does the \cc and therefore the metric grows.
+Where the over time metric can be used is reminding existing develops how much more complex the project is for new developer's start.
+The onboard time for a new developer may take longer, and any existing developer may require more patience with the new developer.
+Tracking the Ranks proportional over time may have a benefit of identifying when a project is starting to slip and get ``untidy.''
+That is if a project can agree on a proportional ranking score.
+
+Overall, it is a nice metric, just like code coverage, is a bit meaningless but can help drive decisions on a case by case bases.
+It can quickly identify complex functions that may need a refactor, ranks D and above.
+For public facing APIs, it can help identify area that many be too broad requiring a developer to hold more context than required to use the API.

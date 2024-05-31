@@ -1,0 +1,46 @@
+\subsection{Data collection and analysis}
+As the Kuadrant project is an open source project the analysis was only done on the public repos.
+Any publicly archived repo was excluded along with any repo forked by the Kuadrant organisation.
+\subsubsection{Tooling}
+To analysis the \cc of each repo, the following tools were used:
+\begin{itemize}
+	\item \href{https://github.com/fzipp/gocyclo}{gocyclo}
+	\item \href{https://github.com/mozilla/rust-code-analysis}{rust-code-analysis-cli}
+	\item \href{https://rubocop.org/}{RuboCop}
+\end{itemize}
+These three tools covered five of the languages found in the project.
+\begin{itemize}
+	\item Go
+	\item Rust
+	\item Python
+	\item JavaScript
+	\item Ruby
+\end{itemize}
+
+In total, 34 languages were detected in the project repos.
+The full list can be found in section \ref{cs_languages}.
+To collect the different languages \href{https://github.com/boyter/scc}{scc} was used.
+This tool will break down the lines of code in a project.
+Which was helpful to graph how much of the projects are being analyzed by the different \cc tools.
+
+\subsubsection{Excluded code}
+Some projects had third party vendor code saved within.
+This vendor code was primarily present in the early days of the projects.
+These third party blocks have been excluded from the analysis.
+Their results skewed graphs with high peaks that did not add any value to the overall outcome.
+
+\subsubsection{Choosing Temporal Data Points}
+To select the temporal data points which each repo was scanned and analyze the merge commits were used.
+In the case of the kuadrant-operator repo directly, the method of merging PRs changed late 2022 and stopped adding the merge message to the git log.
+In this case, every commit after the latest merge was scanned and analyzed.
+This process of checking the commits after the latest merge commit was applied to every repo that was scanned.
+
+\subsubsection{Processing the data}
+All this data is collected with a notebook to allow for reproducible collection.
+The results are normalized and stored in a Json file.
+The results need to be normalized as the \cc tools all have different outputs.
+The collection process is currently not additive and requires a collection of data from the being of repos every time.
+
+A second notebook provides the classification and visualizations of the collected data.
+This only requires the Json file.
+

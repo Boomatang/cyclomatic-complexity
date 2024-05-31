@@ -1,0 +1,69 @@
+\documentclass{article}
+
+% ---------------------------------
+
+\usepackage{import}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+% \usepackage{codebox}
+
+\geometry{
+	a4paper,
+	total={150mm,257mm},
+	left=30mm,
+	top=20mm,
+}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	filecolor=megenta,
+	urlcolor=blue,
+}
+
+\graphicspath{ {./images/} }
+
+\pagestyle{fancy}
+
+\fancyhf{}
+\fancyhead[C]{Understanding Cyclomatic Complexity}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+\linespread{1.5}
+
+% ---------------------------------
+
+\newcommand{\cc}{cyclomatic complexity }
+\newcommand{\ccnsp}{cyclomatic complexity}
+
+% ---------------------------------
+
+\title{Understanding Cyclomatic Complexity}
+\author{Jim Fitzpatrick}
+
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\pagenumbering{roman}
+\newpage
+\pagenumbering{arabic}
+
+% ---------------------------------
+
+\import{./data/}{introduction.tex}
+\import{./data/}{understanding-cc.tex}
+\import{./data/case_study/}{main.tex}
+\import{./data/}{using_the_cyclomatic_complexity_metric.tex}
+\import{./data/}{missing_data.tex}
+\import{./data/}{conclusion.tex}
+
+\end{document}

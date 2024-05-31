@@ -1,0 +1,13 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Table grouping cyclomatic complexity scores.}}{2}{figure.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Lines of code for all Kuadrant projects.}}{4}{figure.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Lines of code in the Kuadrant projects scanned by the cyclomatic complexity tools.}}{5}{figure.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces cyclomatic complexity for the source code}}{5}{figure.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces cyclomatic complexity score ranked}}{5}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Count of functions in each Rank for the Kuadrant Project}}{6}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Total cyclomatic complexity over time for the wasam shim}}{7}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Total cyclomatic complexity over time for limitador}}{7}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Total cyclomatic complexity over time for testsuite.}}{8}{figure.9}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Pie chart of testsuite rankings.}}{9}{figure.10}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Total cyclomatic complexity over time for multicluster-gateway-controller.}}{9}{figure.11}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Go function with a cyclomatic complexity of 3}}{11}{figure.12}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Go function with a cyclomatic complexity of 4}}{12}{figure.13}%
