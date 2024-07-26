@@ -5,7 +5,7 @@ Understanding these assumptions can give an insight into how the outcome from th
 \subsubsection{Applications V's Operators}
 The applications are Authorino and Limitador.
 The operators are all the other operators and controllers, not just the operators related to the applications.
-The assumption is the applications will have a much higher CC score but have less high-ranked scores.
+The assumption is the applications will have a much higher \cc score but have less high-ranked scores.
 The reconcile loops can have very high \cc scores.
 
 \subsubsection{Language Difference}
@@ -14,7 +14,7 @@ These languages are Golang, Rust and Python.
 
 Golang is the primary language in all the operators and controllers.
 As Golang treats errors as values, the code bases are littered with `if err != nil` and this adds choices to every function that will affect cyclomatic complexity score.
-This feature means developers are forced to deal with the errors, but any argument that the CC score is too high in functions needs to take into account errors as values will inflate the CC score.
+This feature means developers are forced to deal with the errors, but any argument that the \cc score is too high in functions needs to take into account errors as values will inflate the \cc score.
 
 Rust on the other hand is different.
 Its compiler does a lot of error checking that Golang just does not.

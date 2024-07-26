@@ -11,15 +11,17 @@ The common formula is M = E - N + 2P, where
 There are other formulas depending on if the graph is a strongly connected graph but for this scenario those do not matter.
 
 The simplest understanding of how to calculate this metric is every time the function makes a choice the one gets added to complexity and a function has a base level complexity of one.
-Below are two example functions that produce the same output and both a cyclomatic complexity of two.
+Below in \textbf{Figure \ref{fig:code1}} are two example functions that produce the same output and both a cyclomatic complexity of two.
 But the structure of each function is different.
 
 % Python code block
-\begin{center}
-	% \codefile{Sample Functions}{./understanding_cc.py}
-\end{center}
+\begin{figure}
+	\lstinputlisting[language=Python,label={lst:ex1}]{./understanding_cc.py}
+	\caption{Functions with same \cc score}
+	\label{fig:code1}
+\end{figure}
 
-The above examples show that readability may have no effect on the \cc and by that point, the style of a language or a team of programmers should not affect the overall metric.
+The examples show that readability may have no effect on the \cc and by that point, the style of a language or a team of programmers should not affect the overall metric.
 What will affect the metric is how the tooling authors interpret the language control flow features.
 For example, a switch statement with cases that fall through to the next case can be counted as one or the total number of cases that are passed through.
 
@@ -30,7 +32,7 @@ Scores across multiple languages should not be compared with each other.
 The metric itself is a number but as a single number, the metric is hard to reason about, so it is bucketed into categories.
 While researching this work, I came across a number of different bucketing systems.
 I will use the bucket classification found on \href{https://radon.readthedocs.io}{radon.readthedocs.io}, it gives a good range at both ends of the spectrum.
-These classifications can be seen in \textbf{Figure \ref{tab:cc_scores}}.
+These classifications can be seen in \textbf{Figure \ref{fig:cc_scores}}.
 This ranking will be used and from a high level you want scores in the ABC grouping and not many Fs.
 \begin{figure}
 
@@ -54,5 +56,5 @@ This ranking will be used and from a high level you want scores in the ABC group
 		\end{tabular}
 	\end{center}
 	\caption{Table grouping \cc scores.}
-	\label{tab:cc_scores}
+	\label{fig:cc_scores}
 \end{figure}
